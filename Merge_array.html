@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Merge Two Array</title>
+</head>
+<body>
+    <script>
+        function merge(array1, array2) 
+{
+    var result_array = [];
+    var arr = array1.concat(array2);
+    var length = arr.length;
+     var assoc = {};
+     while(length--)
+      {
+         var i = arr[length];
+
+        if(!assoc[i])
+
+        {
+              result_array.unshift(i);
+             assoc[i] = true;
+        }
+
+      }
+            return result_array;
+
+}
+var array1 = [39, 56, 74];
+var array2 = [39, 56, 34];
+console.log(merge(array1, array2));
+
+    </script>
+</body>
+</html>
